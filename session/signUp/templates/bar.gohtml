@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<div>
+<div float="left">
+<h2>Welcome to the Bar{{if .Firstname}} {{.Firstname}} {{end}}<h2>
+</div>
+<div  float="right">
+<a href="/logout">Logout</a>
+</div>
+</div>
+
+<h3>Please place your order by scanning the QR code</h3>
+<br>
+<br>
+<p>{{.Firstname}} {{.LastName}} your bill will sent to the email address to {{.Email}}</p>
+</body>
+</html>

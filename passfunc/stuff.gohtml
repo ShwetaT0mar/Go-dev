@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Hey Baby</title>
+</head>
+<body>
+{{range .}}
+{{$hey :="Baby"}}
+{{ up $hey| sb}}: {{sb .Name}} {{sq .Level| rt}}</body>
+{{end}}
+</html>

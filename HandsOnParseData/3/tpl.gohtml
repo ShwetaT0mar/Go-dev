@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+{{range .}}
+    {{range .Breakfast}}
+        {{.Name}}
+        {{.Price}}
+    {{end}}
+    {{range .Lunch}}
+        {{.Name}}
+        {{.Price}}
+    {{end}}
+    {{range .Dinner}}
+        {{.Name}}
+        {{.Price}}
+    {{end}}
+{{end}}
+
+</body>
+</html>

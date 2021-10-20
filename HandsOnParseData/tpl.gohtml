@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+{{range .}}
+
+{{.AcaYear}}
+FALL DATA
+{{.Fall.Term}}
+{{range .Fall.Courses}}
+{{.Number}}
+{{.Name}}
+{{.Units}}
+{{end}}
+
+SPRING DATA
+
+{{.Spring.Term}}
+{{range .Spring.Courses}}
+{{.Number}}
+{{.Name}}
+{{.Units}}
+{{end}}
+
+{{end}}
+
+</body>
+</html>
+© 2021 GitHub, Inc.

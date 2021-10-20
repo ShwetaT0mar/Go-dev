@@ -1,0 +1,111 @@
+package main 
+import ("fmt")
+
+type square struct{
+	side float64
+}
+type circle struct{
+	radius float64
+}
+
+func (s square) area() float64{
+	return s.side * s.side
+}
+
+func (c circle) area() float64{
+	return 3.14 * c.radius * c.radius
+}
+
+type shape interface{
+	area() float64
+}
+
+func info(s shape) float64{
+	fmt.Println(s.area())
+}
+
+func main(){
+	s:=square{2}
+	c:=circle{2}
+	info(s)
+	info(c)
+}
+
+=======================
+package main
+
+import (
+	"fmt"
+)
+
+type person struct{
+	name string
+}
+
+type specialAgent struct{
+	p person
+	level string
+} 
+
+func (p person) pSpeak() {
+	fmt.Println(p.name+" says Hello Dear!");
+}
+
+func (sa specialAgent) saSpeak() {
+	fmt.Println(sa.p.name + " says I am " + sa.level)
+}
+
+func (p person) shits(){
+	fmt.Println(p.name + " shits bricks")
+}
+func (sa specialAgent) shits(){
+	fmt.Println(sa.p.name + " the "+sa.level+" shits gold")
+}
+
+type excreats interface {
+	shits()
+}
+
+func bowelmovement(e excreats) {
+	e.shits()
+}
+
+func main() {
+	p:= person{"Loki"}
+	sa:= specialAgent{person{"Thor"},"God"}
+	
+	fmt.Println(p.name)
+	p.pSpeak()
+	
+	fmt.Println(sa.p.name)
+	sa.saSpeak()
+	
+	sa.p.pSpeak()
+	
+	bowelmovement(p)
+	bowelmovement(sa)
+	
+
+}
+
+=======================
+
+	s := []int{7, 18, 42}
+	fmt.Println(s)
+
+	for i := range s {
+		fmt.Println(i)
+	}
+
+	for i, v := range s {
+		fmt.Println(i, v)
+	}
+
+
+	m:=map[string]int{"Pain":1, "Heaven":0, "Hell":1, "Pleasure":0}
+	fmt.Println(m)
+	for i:=range m{
+	fmt.Println(i)}
+	for k,v:=range m{
+	fmt.Println(k,v)
+	}

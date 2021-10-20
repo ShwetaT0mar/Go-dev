@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>predefined global functions</title>
+</head>
+<body>
+
+
+
+{{range .}}
+    {{if and .Person .Cool}}
+        {{.Person}}
+    {{end}}
+{{end}}
+
+
+{{/*
+{{ index .Age 2}}
+{{ index .Age 3}}
+{{index .Age 5}}
+
+{{index . 2}}
+{{index . 0}}
+{{index . 1}}
+*/}}
+
+<!-- FYI -->
+This is a go template comment
+{{/*(index .Wisdom 3).Name*/}}
+
+
+
+
+</body>
+</html>

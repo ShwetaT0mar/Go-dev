@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+{{range .}}
+<img src="/pics/{{.}}" width= "400px">
+{{end}}
+
+<form method="POST" encType="multipart/form-data">
+    <input type="file" name="nf">
+    <input type="submit">
+</form>
+</body>
+</html>

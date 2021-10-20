@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{{template "header"}}
+
+<form method="POST">
+    <label for="FirstName"> First Name </label>
+    <input type ="text" id ="FirstName" name ="fname">
+    <br>
+    <label for="LastName"> Last Name </label>
+    <input type ="text" id ="LastName" name ="lname">
+    <br>
+    <label for="subscribe"> Subscribe </label>
+    <input type="checkbox" id="subscribe" name="sub">
+    <br>
+    <input type ="submit">
+</form>
+
+<h3>FirstName is: {{.FirstName}}</h3>
+<h3>LastName is: {{.LastName}}</h3>
+<h3>Subscribed : {{if .Subscribed}}True{{else if not .Subscribed}}False{{end}} </h3>
+
+{{template "footer"}}
